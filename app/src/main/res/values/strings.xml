@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Movies-Eirian-tta6</string>
+    <string name="now_playing_fragment_title">Now Playing</string>
+    <string name="my_tickets_fragment_title">My Tickets</string>
+</resources>

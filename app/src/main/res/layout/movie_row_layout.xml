@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:contentPaddingLeft="10dp"
+    app:contentPaddingRight="10dp"
+    app:contentPaddingBottom="10dp"
+    app:contentPaddingTop="10dp"
+    android:paddingEnd="10dp"
+    app:cardElevation="0dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivMovie"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:scaleType="center"
+            app:layout_constraintEnd_toEndOf="@+id/clLayout"
+            app:layout_constraintStart_toStartOf="@+id/clLayout"
+            app:layout_constraintTop_toTopOf="@+id/clLayout"
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/tvMovieTitle"
+            android:paddingTop="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Movie Title Goes Here"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/ivMovie"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivMovie" />
+
+        <TextView
+            android:id="@+id/tvRating"
+            android:paddingTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="xx%"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/tvMovieTitle"
+            app:layout_constraintTop_toBottomOf="@+id/ivMovie" />
+
+        <TextView
+            android:id="@+id/tvReleaseDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Released Date Goes Here"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/btnPurchase"
+            app:layout_constraintTop_toBottomOf="@+id/tvMovieTitle" />
+
+        <TextView
+            android:id="@+id/tvPlotSum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Plot Summary"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tvReleaseDate"
+            app:layout_constraintEnd_toEndOf="@+id/ivMovie"
+            app:layout_constraintStart_toStartOf="@+id/ivMovie" />
+
+        <TextView
+            android:id="@+id/tvOverview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Overview goes here"
+            app:layout_constraintTop_toBottomOf="@+id/tvPlotSum"
+            app:layout_constraintEnd_toEndOf="@+id/ivMovie"
+            app:layout_constraintStart_toStartOf="@+id/ivMovie" />
+
+        <TextView
+            android:id="@+id/tvMovieId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hidden movie_id goes here"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@+id/tvOverview"
+            app:layout_constraintEnd_toEndOf="@+id/ivMovie"
+            app:layout_constraintStart_toStartOf="@+id/ivMovie" />
+
+        <Button
+            android:id="@+id/btnPurchase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="BUY A TICKET"
+            app:layout_constraintTop_toBottomOf="@+id/tvOverview"
+            app:layout_constraintEnd_toEndOf="@+id/ivMovie"
+            app:layout_constraintStart_toStartOf="@+id/ivMovie" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
